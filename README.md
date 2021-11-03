@@ -4,23 +4,25 @@
 
 A personal repository used for uploading practice code and assignments for easy sharing.
 
-## File Structure
+## Folder Structure
 
-The folder structure of this repo is as follows. Note that both assignments and practice are stored in the same last leaf folder
-Coding Dojo Development/
-|
-|---> Track/
-|     |
-|     |---> Course/
-|     |     |
-|     |     |---> assignment1.html
-|     |     |---> assignment2.html
-|     |     |
-|     |     |---> Practice/
-|     |     |     |
-|     |     |     |---> practice1.html
-|     |     |     |---> practice2.html
-|     |
-|     |---> Course/
-|
-|---> Track/
+The folder structure of this repo is as follows. Note that both assignments and practice are stored in the same last leaf folder.
+
+Coding Dojo Development/  
+|  
+|---> Track/  
+|     |  
+|     |---> Course/  
+|     |     |  
+|     |     |---> assignment1.html  
+|     |     |---> assignment2.html  
+|     |     |  
+|     |     |---> Practice/  
+|     |     |     |  
+|     |     |     |---> practice1.html  
+|     |     |     |---> practice2.html  
+|     |  
+|     |---> Course/  
+|  
+|---> Track/  
+
