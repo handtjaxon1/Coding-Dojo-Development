@@ -14,13 +14,22 @@ Coding Dojo Development/
 |     |  
 |     |---> Course/  
 |     |     |  
-|     |     |---> assignment1.html  
-|     |     |---> assignment2.html  
+|     |     |---> Assignment1/  
+|     |     |     |  
+|     |     |     |---> assignment1.html  
+|     |     |     |---> assignment1.css  
+|     |     |  
+|     |     |---> Assignment2/  
+|     |     |     |  
+|     |     |     |---> assignment2.html  
+|     |     |     |---> assignment2.css  
 |     |     |  
 |     |     |---> Practice/  
 |     |     |     |  
 |     |     |     |---> practice1.html  
+|     |     |     |---> practice1.css  
 |     |     |     |---> practice2.html  
+|     |     |     |---> practice2.css  
 |     |  
 |     |---> Course/  
 |  
