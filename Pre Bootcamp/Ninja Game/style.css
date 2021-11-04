@@ -1,0 +1,15 @@
+#background {
+    width: 750px;
+    height: 600px;
+    background-image: url(images/white_bg.jpg);
+    /* border: 2px solid black; */
+}
+
+#character {
+    position: absolute;
+    top: 100px;
+    left: 100px;
+    background-image: url(images/down1.png);
+    width: 59px;
+    height: 86px;
+}
