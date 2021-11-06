@@ -1,0 +1,145 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    text-align: center;
+}
+
+h2 {
+    margin: 0 0 0 10px;
+    font-size: 16px;
+}
+
+.parent {
+    background-color: gray;
+    margin: 10px;
+    display: flex;
+}
+
+.child {
+    padding: 20px;
+}
+
+.one {
+    background-color: red;
+}
+
+.two {
+    background-color: yellow;
+}
+
+.three {
+    background-color: blue;
+}
+
+/* Not strictly necessary since this is the default behavior */
+.flex-start {
+    justify-content: flex-start;
+}
+
+.flex-end {
+    justify-content: flex-end;
+}
+
+.flex-center {
+    justify-content: center;
+}
+
+.flex-between {
+    justify-content: space-between;
+}
+
+.flex-around {
+    justify-content: space-around;
+}
+
+.flex-evenly {
+    justify-content: space-evenly;
+}
+
+.flex-grow-one {
+    flex-grow: 1;
+}
+
+.flex-grow-two {
+    flex-grow: 2;
+}
+
+.flex-grow-three {
+    flex-grow: 3;
+}
+
+.flex-shrink-one {
+    flex: 0 1 1000px;
+}
+
+.flex-shrink-zero {
+    flex: 0 0 1000px;
+}
+
+.flex-wrap {
+    flex-wrap: wrap;
+}
+
+.flex-wrap-rev {
+    flex-wrap: wrap-reverse;
+}
+
+/* Technically not required since this is the default, but it's here for completeness sake */
+.flex-row {
+    flex-direction: row;
+}
+
+.flex-row-rev {
+    flex-direction: row-reverse;
+}
+
+.flex-column {
+    flex-direction: column;
+}
+
+.flex-column-rev {
+    flex-direction: column-reverse;
+}
+
+.fixed {
+    height: 100px;
+}
+
+.align-start {
+    align-items: flex-start;
+}
+
+.align-end {
+    align-items: flex-end;
+}
+
+.align-center {
+    align-items: center;
+}
+
+.align-baseline {
+    align-items: baseline;
+}
+
+.align-stretch {
+    align-items: stretch;
+}
+
+.child-aligned {
+    flex: 0 0 50px;
+}
+
+.one-aligned {
+    min-height: 5px;
+}
+
+.two-aligned {
+    min-height: 15px;
+}
+
+.three-aligned {
+    min-height: 25px;
+}
