@@ -1,0 +1,56 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    margin: 50px auto;
+    /* Could increase this if we want more white space, but I didn't like it like that myself */
+    width: 600px; 
+    height: 320px;
+    display: flex;
+    flex-direction: column;
+}
+
+#profile {
+    width: 100px;
+    position: relative;
+    top: 50px;
+    left: 40px;
+    border: 3px solid rgb(201, 201, 201);
+    border-radius: 50%;
+    background-color: ghostwhite;
+}
+
+.top {
+    background-color: rgb(10, 184, 190);
+    flex: 1;
+    border-radius: 5px 5px 0 0;
+}
+
+.bottom {
+    background-color: ghostwhite;
+    border: 3px solid rgb(201, 201, 201);
+    border-top: 0;
+    border-radius: 0 0 5px 5px;
+    flex: 2;
+    padding: 40px 40px 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.inline-image {
+    width: 14px;
+    margin-right: 5px;
+}
+
+/* Allows for vertical aligning the image/text combos in the profile */
+.image-text {
+    display: flex;
+    align-items: center;
+}
+
+p {
+    font-size: 18px;
+}
