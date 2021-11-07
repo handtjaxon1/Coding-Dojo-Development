@@ -22,11 +22,21 @@ p {
 
 .section {
     width: 100%;
+    margin: 10px;
 }
 
 .section-body {
     border: 3px solid #c9c9c9;
     border-top: 0;
+}
+
+.section-header {
+    background-color: #2f2f2f;
+    color: #ffffff;
+    padding: 20px 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 /* Navbar styling */
@@ -103,6 +113,7 @@ div.col {
 
 .col-2 {
     flex: 2;
+    margin-right: 20px;
 }
 
 /* TODO Remove once the page is set up */
@@ -113,10 +124,6 @@ div.col {
 }
 
 /* User card stylings */
-#user {
-    width: 100%;
-}
-
 #profile {
     width: 100px;
     position: relative;
@@ -161,19 +168,6 @@ div.col {
 }
 
 /* Connection requests section styles */
-#requests {
-    width: 100%;
-}
-
-.section-header {
-    background-color: #2f2f2f;
-    color: #ffffff;
-    padding: 20px 10px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
 .request {
     display: flex;
     justify-content: space-between;
@@ -207,4 +201,27 @@ div.col {
     padding: 10px 20px;
     border-top: 3px solid #c9c9c9;
     font-size: 20px;
+}
+
+/* Education section styles */
+.education-header {
+    justify-content: flex-start;
+    padding-left: 40px;
+}
+
+.education-body {
+    padding: 0 40px;
+}
+
+.education-section {
+    padding: 20px 0;
+    border-bottom: 3px solid #c9c9c9;
+}
+
+.education-section:last-child {
+    border-bottom: none;
+}
+
+.education-date {
+    color: #c9c9c9;
 }
