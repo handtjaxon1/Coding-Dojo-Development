@@ -200,3 +200,11 @@ div.col {
     border-radius: 50%;
     margin-right: 10px;
 }
+
+.more-connections {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 20px;
+    border-top: 3px solid #c9c9c9;
+    font-size: 20px;
+}
