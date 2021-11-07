@@ -17,7 +17,7 @@
 </head>
 <body>
     <div class="navbar">
-        <div class="container">
+        <div class="container nav-container">
             <h1>Profile</h1>
             <div class="nav-interior">
                 <ul class="nav-links">
@@ -29,18 +29,18 @@
             </div>
         </div>
     </div>
-    <div class="main-content">
-        <div class="container-2 test">
+    <div class="main">
+        <div class="container main-container test">
             <div class="col col-2">
-                <!-- User card styling -->
-                <div id="user">
+                <!-- User card section -->
+                <div class="section">
                     <div class="top">
                         <img src="images/user-circle.png" alt="user profile icon" id="profile">
                     </div>
                     <div class="bottom">
                         <h1>Jaxon Handt</h1>
                         <div class="image-text">
-                            <img src="icons/map-marker.png" alt="map marker" class="inline-image">
+                            <img src="icons/map-marker.png" alt="map marker" class="inline-image-sm">
                             <p>Fargo, ND</p>
                         </div>
                         <div>
@@ -48,20 +48,54 @@
                             <p>Coffee is my best friend</p>
                         </div>
                         <div class="image-text">
-                            <img src="icons/gear.png" alt="settings gear" class="inline-image">
+                            <img src="icons/gear.png" alt="settings gear" class="inline-image-sm">
                             <a href="#">edit settings</a>
                         </div>
                     </div>
                 </div>
+                <!-- Education section -->
                 <div id="education">
                     Education
                 </div>
             </div>
             <div class="col col-1">
-                <div id="requests">
-                    Requests
+                <!-- Requests section -->
+                <div class="section">
+                    <!-- Requests header -->
+                    <div class="requests-header">
+                        <div class="notification notification-circle">2</div>
+                        <p>Connection Requests</p>
+                    </div>
+                    <!-- Requests body -->
+                    <div class="requests-body">
+                        <div class="request">
+                            <!-- Request info -->
+                            <div class="image-text">
+                                <img src="images/todd-s.jpg" alt="Todd E profile pic" class="connection-pic">
+                                <p>Todd E</p>
+                            </div>
+                            <!-- Accept/decline buttons -->
+                            <div>
+                                <img src="icons/accept-circle.png" alt="accept request" class="inline-image-lg">
+                                <img src="icons/close-circle.png" alt="decline request" class="inline-image-lg">
+                            </div>
+                        </div>
+                        <div class="request">
+                            <!-- Request info -->
+                            <div class="image-text">
+                                <img src="images/phil-s.jpg" alt="Phil K profile pic" class="connection-pic">
+                                <p>Phil K</p>
+                            </div>
+                            <!-- Accept/decline buttons -->
+                            <div>
+                                <img src="icons/accept-circle.png" alt="accept request" class="inline-image-lg">
+                                <img src="icons/close-circle.png" alt="decline request" class="inline-image-lg">
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div id="connections">
+                <!-- Connections section -->
+                <div class="section">
                     Connections
                 </div>
             </div>
