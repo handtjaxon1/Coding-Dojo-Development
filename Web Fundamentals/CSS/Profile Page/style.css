@@ -13,7 +13,7 @@ body {
     min-width: 700px;
     display: flex;
     justify-content: space-between;
-    padding: 10px 20px;
+    padding: 10px;
 }
 
 .navbar {
@@ -62,9 +62,80 @@ a.active {
     justify-content: center;
 }
 
+.container-2 {
+    width: 60%;
+    min-width: 700px;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+}
+
+div.col {
+    border: 2px solid #2f2f2f;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.col-1 {
+    flex: 1;
+}
+
+.col-2 {
+    flex: 2;
+}
+
 .test {
     /* background-color: #2f2f2f; */
     border: 2px solid #2f2f2f;
     border-top: none;
-    height: 1000px;
+    min-height: 500px;
+}
+
+/* User card styling */
+#user {
+    width: 90%;
+}
+
+#profile {
+    width: 100px;
+    position: relative;
+    top: 50px;
+    left: 40px;
+    border: 3px solid rgb(201, 201, 201);
+    border-radius: 50%;
+    background-color: ghostwhite;
+}
+
+.top {
+    background-color: rgb(10, 184, 190);
+    flex: 1;
+    border-radius: 5px 5px 0 0;
+}
+
+.bottom {
+    background-color: ghostwhite;
+    border: 3px solid rgb(201, 201, 201);
+    border-top: 0;
+    border-radius: 0 0 5px 5px;
+    flex: 2;
+    padding: 40px 40px 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.inline-image {
+    width: 14px;
+    margin-right: 5px;
+}
+
+/* Allows for vertical aligning the image/text combos in the profile */
+.image-text {
+    display: flex;
+    align-items: center;
+}
+
+p {
+    font-size: 20px;
 }
