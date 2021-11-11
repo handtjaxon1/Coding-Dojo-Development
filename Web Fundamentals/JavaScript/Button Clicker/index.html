@@ -14,28 +14,56 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="container bg-light">
-        <h1 class="flex">Dojonary</h1>
-        <input type="text" name="searchbox" id="searchbox" placeholder="Search" class="flex">
-        <button class="btn flex">Login</button>
+    <!-- Header bar -->
+    <div class="container header bg-light">
+        <p class="header-title header-flex">Dojonary</p>
+        <input type="text" name="searchbox" id="searchbox" placeholder="Search" class="header-flex">
+        <button class="btn btn-login header-flex">Login</button>
     </div>
 
     <!-- Main content -->
-    <!-- <div class="container"></div>
-        <div class="col col-1">
-            <div>
-                Ninja #1
+    <div class="container">
+        <!-- Main content left column -->
+        <div class="col col-2">
+            <!-- 1st definition -->
+            <div class="container definition-container">
+                <!-- Part of speech definition column -->
+                <div class="col col-def-left">
+                    <p class="definition-title flex-item">ninja</p>
+                    <p class="definition-pos italic flex-item">noun</p>
+                    <p class="definition-plural flex-item">Plural: <span class="italic">ninjas</span></p>
+                    <button class="btn btn-like flex-item"><span id="def-1-likes">13</span> Likes</button>
+                </div>
+                <!-- Description definition column -->
+                <div class="col col-1 col-def-right">
+                    <p class="definition-desc">A practitioner skilled in the <a href="https://en.wikipedia.org/wiki/Culture_of_Japan" target="_blank">Japanese</a> art of <a href="https://en.wikipedia.org/wiki/Ninjutsu" target="_blank">ninjutsu</a></p>
+                </div>
             </div>
-            <div>
-                Ninja #2
+            <!-- 2nd definition -->
+            <div class="container definition-container">
+                <!-- Part of speech definition column -->
+                <div class="col col-def-left">
+                    <p class="definition-title flex-item">ninja</p>
+                    <p class="definition-pos italic flex-item">noun</p>
+                    <p class="definition-plural flex-item">Plural: <span class="italic">ninjas</span></p>
+                    <button class="btn btn-like flex-item"><span id="def-2-likes">37</span> Likes</button>
+                </div>
+                <!-- Description definition column -->
+                <div class="col col-1 col-def-right">
+                    <p class="definition-desc">A <a href="https://en.wikipedia.org/wiki/Programmer" target="_blank">programmer</a> who breaks down problems with <a href="https://possibilitychange.com/zen-and-the-art-of-focus/#:~:text=Doing%20one%20thing%20at%20a,of%20intense%20focus%20as%20well." target="_blank">zen</a>-like focus</p>
+                </div>
             </div>
         </div>
-        <div class="col col-2">
-            <div>
-                <p>Dojonary is defined by <strong>YOU</strong></p>
-                <button class="btn" id="add-definition">Add Definition</button>
+        <!-- Main content right column -->
+        <div class="col col-1">
+            <div class="container add-def-container">
+                <p class="flex-item">Dojonary is defined by <strong>YOU</strong></p>
+                <button class="btn btn-add flex-item" id="add-definition">Add Definition</button>
             </div>
-        </div> -->
+        </div>
+    </div>
+
+    <!-- Linked javascript -->
     <script src="script.js"></script>
 </body>
 </html>

@@ -6,6 +6,11 @@
 
 body {
     font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+}
+
+a {
+    color: #2c6fff;
 }
 
 .bg-light {
@@ -14,27 +19,34 @@ body {
 
 .container {
     width: 75%;
-    margin: 0 auto; 
-    padding: 20px;
+    margin: 0 auto;
     display: flex;
     justify-content: space-between;
 }
 
-.flex {
+.header {
+    padding: 20px;
+}
+
+.header-title {
+    font-size: 32px;
+    font-weight: bold;
+}
+
+.header-flex {
     margin: 0 10px;
 }
 
-.flex:first-child {
+.header-flex:first-child {
     margin-left: 0;
 }
 
-.flex:last-child {
+.header-flex:last-child {
     margin-right: 0;
 }
 
 #searchbox {
-    height: 40px;
-    width: 300px;
+    width: 400px;
     border: 3px solid #000000;
 }
 
@@ -43,11 +55,98 @@ input[placeholder] {
 }
 
 .btn {
-    height: 40px;
-    width: 100px;
     border: 2px solid #000000;
+    box-shadow: 5px 5px #000000;
+    padding: 10px;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.btn-login {
     background-color: #2c6fff;
     color: #ffffff;
-    font-size: 14px;
-    box-shadow: 5px 5px #000000;
+    width: 100px;
+}
+
+.btn-like {
+    background-color: #ffe033;
+    color: #000000;
+    width: 100%;
+}
+
+.btn-add {
+    background-color: #12d400;
+    color: #000000;
+    width: 100%;
+}
+
+.col {
+    display: flex;
+    flex-direction: column;
+}
+
+.col-1 {
+    flex: 1;
+}
+
+.col-2 {
+    flex: 2;
+    margin-right: 20px;
+}
+
+.col-def-left {
+    align-items: center;
+    justify-content: center;
+}
+
+.col-def-right {
+    align-items: flex-start;
+    justify-content: center;
+    padding-left: 40px;
+}
+
+.definition-container {
+    border: 3px solid #000000;
+    width: 100%;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+.definition-title {
+    font-size: 32px;
+    font-weight: bold;
+}
+
+/* Definition Part Of Speach */
+.definition-pos {
+    font-size: 20px;
+}
+
+/* Ensures the "plural" text is centered when squished to very small screen sizes */
+.definition-plural {
+    text-align: center;
+}
+
+.definition-desc {
+    line-height: 24px;
+}
+
+.italic {
+    font-style: italic;
+}
+
+.add-def-container {
+    border: 3px solid #000000;
+    width: 100%;
+    padding: 20px;
+    margin-top: 20px;
+    flex-direction: column;
+}
+
+.flex-item {
+    margin-top: 10px;
+}
+
+.flex-item:first-child {
+    margin-top: 0;
 }
