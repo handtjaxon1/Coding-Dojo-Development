@@ -18,7 +18,7 @@
     <div class="container header bg-light">
         <p class="header-title header-flex">Dojonary</p>
         <input type="text" name="searchbox" id="searchbox" placeholder="Search" class="header-flex">
-        <button class="btn btn-login header-flex">Login</button>
+        <button class="btn btn-login header-flex" id="login" onclick="updateLogin(this)">Login</button>
     </div>
 
     <!-- Main content -->
@@ -32,7 +32,7 @@
                     <p class="definition-title flex-item">ninja</p>
                     <p class="definition-pos italic flex-item">noun</p>
                     <p class="definition-plural flex-item">Plural: <span class="italic">ninjas</span></p>
-                    <button class="btn btn-like flex-item"><span id="def-1-likes">13</span> Likes</button>
+                    <button class="btn btn-like flex-item" onclick="liked(this,'def-1-likes')"><span id="def-1-likes">13</span> Likes</button>
                 </div>
                 <!-- Description definition column -->
                 <div class="col col-1 col-def-right">
@@ -46,7 +46,7 @@
                     <p class="definition-title flex-item">ninja</p>
                     <p class="definition-pos italic flex-item">noun</p>
                     <p class="definition-plural flex-item">Plural: <span class="italic">ninjas</span></p>
-                    <button class="btn btn-like flex-item"><span id="def-2-likes">37</span> Likes</button>
+                    <button class="btn btn-like flex-item" onclick="liked(this,'def-2-likes')"><span id="def-2-likes">37</span> Likes</button>
                 </div>
                 <!-- Description definition column -->
                 <div class="col col-1 col-def-right">
@@ -58,7 +58,7 @@
         <div class="col col-1">
             <div class="container add-def-container">
                 <p class="flex-item">Dojonary is defined by <strong>YOU</strong></p>
-                <button class="btn btn-add flex-item" id="add-definition">Add Definition</button>
+                <button class="btn btn-add flex-item" id="add-definition" onclick="removeAddDef(this)">Add Definition</button>
             </div>
         </div>
     </div>
