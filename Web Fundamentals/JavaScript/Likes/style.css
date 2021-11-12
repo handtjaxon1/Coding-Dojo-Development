@@ -5,7 +5,7 @@
 }
 
 body {
-    font-size: 18px;
+    font-size: 20px;
     font-family: 'Montserrat', sans-serif;
 }
 
@@ -13,9 +13,13 @@ h1, h2 {
     font-size: 32px;
 }
 
+a {
+    color: #2c6fff;
+}
+
 .btn {
     background-color: #ffe033;
-    color: #f3f3f3;
+    color: #000000;
     width: 120px;
     height: 40px;
     border: 2px solid #000000;
@@ -98,6 +102,10 @@ h1, h2 {
 
 .post {
     padding: 20px;
+}
+
+.likes {
+    margin-right: 20px;
 }
 
 .row {

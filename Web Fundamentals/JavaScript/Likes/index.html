@@ -32,8 +32,8 @@
                 <div class="post border flex-col">
                     <div class="row">
                         <p class="profile-name">Neil M</p>
-                        <p>9 like(s)</p>
-                        <button class="btn">Like</button>
+                        <p class="likes"><span id="post-1">9</span> like(s)</p>
+                        <button class="btn" onclick="addLike('post-1')">Like</button>
                     </div>
                     <div class="row">
                         <p>I just set up this new discord bot, let me know what you all think. <a href="#">link</a></p>
@@ -42,8 +42,8 @@
                 <div class="post border flex-col">
                     <div class="row">
                         <p class="profile-name">Nichole K</p>
-                        <p>12 like(s)</p>
-                        <button class="btn">Like</button>
+                        <p class="likes"><span id="post-2">12</span> like(s)</p>
+                        <button class="btn" onclick="addLike('post-2')">Like</button>
                     </div>
                     <div class="row">
                         <p>Just finished my <a href="#">next comic</a>, check it out.</p>
@@ -52,8 +52,8 @@
                 <div class="post border flex-col">
                     <div class="row">
                         <p class="profile-name">Jim R</p>
-                        <p>9 like(s)</p>
-                        <button class="btn">Like</button>
+                        <p class="likes"><span id="post-3">3</span> like(s)</p>
+                        <button class="btn" onclick="addLike('post-3')">Like</button>
                     </div>
                     <div class="row">
                         <p>I can't stop listening to the <a href="#">new album</a>. Who else is liking it?</p>
@@ -62,5 +62,7 @@
             </div>
         </div>
     </div>
+
+    <script src="script.js"></script>
 </body>
 </html>
