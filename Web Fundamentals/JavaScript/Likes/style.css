@@ -1,0 +1,110 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-size: 18px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+h1, h2 {
+    font-size: 32px;
+}
+
+.btn {
+    background-color: #ffe033;
+    color: #f3f3f3;
+    width: 120px;
+    height: 40px;
+    border: 2px solid #000000;
+    box-shadow: 5px 5px #000000;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.border {
+    border: 5px solid #000000;
+}
+
+.container {
+    width: 75%;
+    min-width: 550px;
+    max-width: 900px;
+    margin: 0 auto;
+    display: flex;
+}
+
+.header-container {
+    background-color: #000000;
+    color: #f3f3f3;
+    padding: 20px;
+    align-items: center;
+}
+
+.main-container {
+    flex-direction: column;
+    align-items: center;
+}
+
+.feed-header {
+    padding: 20px;
+}
+
+.feed-body {
+    display: flex;
+    width: 100%;
+}
+
+.col-l {
+    flex: 1;
+    margin-right: 20px;
+}
+
+.col-r {
+    flex: 3;
+}
+
+.flex-col {
+    margin: 20px 0;
+}
+
+.flex-col:first-child {
+    margin-top: 0;
+}
+
+.flex-col:last-child {
+    margin-bottom: 0;
+}
+
+.profile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.profile-pic {
+    width: 96px;
+}
+
+.profile-name {
+    font-size: 24px;
+    font-weight: bold;
+    flex: 1;
+}
+
+.post {
+    padding: 20px;
+}
+
+.row {
+    display: flex;
+    align-items: center;
+}
+
+.row:last-child {
+    margin: 20px 0 0 0;
+}
