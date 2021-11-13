@@ -77,12 +77,18 @@ body {
     font-weight: bold;
 }
 
+/* Targets the "high" temps */
 .temp > :first-child {
     color: var(--color-high);
 }
 
+/* Targets the "low" temps */
 .temp > :last-child {
     color: var(--color-low);
+}
+
+.temp p::after {
+    content: "°";
 }
 
 .item {
