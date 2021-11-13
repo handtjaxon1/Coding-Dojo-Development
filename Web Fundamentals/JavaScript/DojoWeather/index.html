@@ -27,9 +27,9 @@
         <div class="container main">
             <h1>San Jose</h1>
             <div>
-                <label>show temperature in</label>
-                <select name="tempType" id="tempType">
-                    <option value="celcius">C<span>&#176;</span></option>
+                <label for="tempType">show temperature in</label>
+                <select name="tempType" id="tempType" onchange="convertTemp(this)">
+                    <option value="celsius">C<span>&#176;</span></option>
                     <option value="fahrenheit">F<span>&#176;</span></option>
                 </select>
             </div>
@@ -80,7 +80,7 @@
             <h3>Stop! Cookie Time</h3>
             <p>We use cookies (sadly not the edible ones) to personalize content and ads, to provide social media features, and to analyze our traffic. <a href="#">Read more...</a></p>
         </div>
-        <button class="btn">I Accept</button>
+        <button class="btn" onclick="removeCookie()">I Accept</button>
     </div>
 
     <script src="script.js"></script>

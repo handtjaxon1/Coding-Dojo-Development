@@ -18,8 +18,9 @@ body {
     background-color: var(--color-light);
 }
 
+/* Only included to demonstrate the cookies window is fixed */
 .body {
-    height: 900px;
+    height: 1000px;
 }
 
 .container {
@@ -85,7 +86,7 @@ body {
 }
 
 .item {
-    margin: 5px 0;
+    margin: 10px 0;
 }
 
 .cookie {
@@ -110,4 +111,5 @@ body {
     font-weight: bold;
     background-color: var(--color-primary);
     width: 150px;
+    cursor: pointer;
 }
