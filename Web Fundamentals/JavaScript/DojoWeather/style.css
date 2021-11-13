@@ -1,0 +1,113 @@
+:root {
+    --color-primary: #66bfe9;
+    --color-low: #2626ff;
+    --color-high: #ff1c1c;
+    --color-light: #f3f3f3;
+    --color-neutral: #c9c9c9;
+    --color-dark: #000000;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: var(--color-light);
+}
+
+.body {
+    height: 900px;
+}
+
+.container {
+    width: 900px;
+    margin: 0 auto;
+    padding: 1.5rem 0;
+}
+
+.container, .nav-links {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav {
+    background-color: var(--color-primary);
+    color: var(--color-light);
+}
+
+.nav-links {
+    width: 50%;
+    list-style-type: none;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: inherit;
+    font-size: 1.5rem;
+}
+
+.main {
+    border-bottom: 3px solid var(--color-dark);
+}
+
+.day {
+    background-color: var(--color-neutral);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+}
+
+.icon {
+    height: 128px;
+    width: 128px;
+    border-radius: 50%;
+}
+
+.temp {
+    width: 75%;
+    display: flex;
+    justify-content: space-between;
+    font-weight: bold;
+}
+
+.temp > :first-child {
+    color: var(--color-high);
+}
+
+.temp > :last-child {
+    color: var(--color-low);
+}
+
+.item {
+    margin: 5px 0;
+}
+
+.cookie {
+    border: 3px solid var(--color-dark);
+    display: flex;
+    padding: 20px;
+    position: fixed;
+    bottom: 10px;
+    left: 50%;
+    transform: translate(-50%, 0);
+}
+
+.cookie-item {
+    margin: 0 20px;
+}
+
+.btn {
+    border: 3px solid var(--color-dark);
+    box-shadow: 5px 5px var(--color-dark);
+    padding: 10px;
+    font-size: 14px;
+    font-weight: bold;
+    background-color: var(--color-primary);
+    width: 150px;
+}

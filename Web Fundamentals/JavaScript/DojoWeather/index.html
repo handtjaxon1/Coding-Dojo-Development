@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DojoWeather</title>
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <div class="nav">
+        <div class="container">
+            <h1 class="nav-title">DojoWeather</h1>
+            <ul class="nav-links">
+                <li><a href="#">Burbank</a></li>
+                <li><a href="#">Chicago</a></li>
+                <li><a href="#">Dallas</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <section class="body">
+        <div class="container main">
+            <h1>San Jose</h1>
+            <div>
+                <label>show temperature in</label>
+                <select name="tempType" id="tempType">
+                    <option value="celcius">C<span>&#176;</span></option>
+                    <option value="fahrenheit">F<span>&#176;</span></option>
+                </select>
+            </div>
+        </div>
+        <div class="container">
+            <div class="day">
+                <h2 class="item">Today</h2>
+                <img src="assets/some_rain.png" alt="some rain" class="icon item">
+                <p class="item">some rain</p>
+                <div class="temp item">
+                    <p>24</p>
+                    <p>18</p>
+                </div>
+            </div>
+            <div class="day">
+                <h2 class="item">Tomorrow</h2>
+                <img src="assets/some_sun.png" alt="sunny" class="icon item">
+                <p class="item">sunny</p>
+                <div class="temp item">
+                    <p>27</p>
+                    <p>19</p>
+                </div>
+            </div>
+            <div class="day">
+                <h2 class="item">Friday</h2>
+                <img src="assets/some_clouds.png" alt="cloudy" class="icon item">
+                <p class="item">some clouds</p>
+                <div class="temp item">
+                    <p>21</p>
+                    <p>16</p>
+                </div>
+            </div>
+            <div class="day">
+                <h2 class="item">Saturday</h2>
+                <img src="assets/some_sun.png" alt="sunny" class="icon item">
+                <p class="item">sunny</p>
+                <div class="temp item">
+                    <p>26</p>
+                    <p>21</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="container cookie">
+        <img src="assets/cookie.png" alt="cookie" class="">
+        <div class="cookie-item">
+            <h3>Stop! Cookie Time</h3>
+            <p>We use cookies (sadly not the edible ones) to personalize content and ads, to provide social media features, and to analyze our traffic. <a href="#">Read more...</a></p>
+        </div>
+        <button class="btn">I Accept</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
