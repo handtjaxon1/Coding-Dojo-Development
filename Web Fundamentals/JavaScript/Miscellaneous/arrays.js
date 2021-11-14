@@ -68,7 +68,7 @@ console.log(result); // we expect back ["e", "d", "c", "b", "a"]
 function fibonacciArray(n) {
     // the [0, 1] are the starting values of the array to calculate the rest from
     var fibArr = [0, 1];
-    while (fibArr.length < 10) {
+    while (fibArr.length < n) {
         var value = fibArr[fibArr.length-1] + fibArr[fibArr.length-2];
         fibArr.push(value);
     }
