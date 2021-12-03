@@ -45,8 +45,9 @@ class BankAccount:
             self.balance += self.balance * self.int_rate
         return self
 
-account1 = BankAccount(1000, 0.02)
-account2 = BankAccount(5000,0.075)
+# Testing the bank account functionality
+# account1 = BankAccount(1000, 0.02)
+# account2 = BankAccount(5000,0.075)
 
-account1.deposit(500).deposit(750.50).deposit(587.25).withdraw(3000).yieldInterest().displayAccountInfo()
-account2.deposit(87.23).withdraw(750).withdraw(625.99).withdraw(220).yieldInterest().displayAccountInfo()
+# account1.deposit(500).deposit(750.50).deposit(587.25).withdraw(3000).yieldInterest().displayAccountInfo()
+# account2.deposit(87.23).withdraw(750).withdraw(625.99).withdraw(220).yieldInterest().displayAccountInfo()

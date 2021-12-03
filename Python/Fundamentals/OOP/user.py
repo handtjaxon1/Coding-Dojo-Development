@@ -1,3 +1,5 @@
+import bankAccount
+
 class User:
     # class attributes are defined in the class
     bank_name = "First National Dojo"
@@ -6,35 +8,30 @@ class User:
         # instance attributes are defined within the "constructor"
         self.name = name
         self.email_address = email_address
-        self.account_balance = 0
+        self.account = bankAccount.BankAccount(0, 0.02)
     
     # called to add to the user's account balance
     def makeDeposit(self, amount):
-        self.account_balance += amount
-        print(f"Deposited ${amount} into {self.name}'s account.")
+        self.account.deposit(amount)
+        #print(f"Deposited ${amount} into {self.name}'s account.")
         return self
     
     # called to remove money from the user's account
     def makeWithdrawal(self, amount):
-        self.account_balance -= amount
-        print(f"Withdrew ${amount} from {self.name}'s account.")
+        self.account.withdraw(amount)
+        #print(f"Withdrew ${amount} from {self.name}'s account.")
         return self
-
-    # experimental function that could be used to test whether a withdrawal can be done before it's performed
-    # returns whether a withdrawal can be made
-    def canWithdraw(self, amount):
-        return self.account_balance - amount >= 0
     
     # displays the account user and balance
     def display_user_balance(self):
-        print(f"User: {self.name}, Balance: ${self.account_balance}")
+        print(f"User: {self.name}, Balance: ${self.account.balance}")
         return self
     
     # transfer money from this user to another
     def transfer_user_money(self, other_user, amount):
-        self.makeWithdrawal(amount)
-        other_user.makeDeposit(amount)
-        print(f"Transferred ${amount} from {self.name} to {other_user.name}")
+        self.account.withdraw(amount)
+        other_user.account.deposit(amount)
+        #print(f"Transferred ${amount} from {self.name} to {other_user.name}")
         return self
 
 # Create users
