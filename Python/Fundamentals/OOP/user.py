@@ -20,6 +20,7 @@ class User:
         print(f"Withdrew ${amount} from {self.name}'s account.")
         return self
 
+    # experimental function that could be used to test whether a withdrawal can be done before it's performed
     # returns whether a withdrawal can be made
     def canWithdraw(self, amount):
         return self.account_balance - amount >= 0
@@ -42,25 +43,13 @@ kevin = User("Kevin Malone", "phoneymaloney@yahoo.com")
 pam = User("Pam Beesly", "pamalabeesington@dundermifflin.com")
 
 # Michael deposits/withdrawals
-michael.makeDeposit(500)
-michael.makeDeposit(200)
-michael.makeDeposit(95)
-michael.makeWithdrawal(170)
-michael.display_user_balance()
+michael.makeDeposit(500).makeDeposit(200).makeDeposit(95).makeWithdrawal(170).display_user_balance()
 
 # Kevin deposits/withdrawals
-kevin.makeDeposit(1000)
-kevin.makeDeposit(27)
-kevin.makeWithdrawal(550)
-kevin.makeWithdrawal(200)
-kevin.display_user_balance()
+kevin.makeDeposit(1000).makeDeposit(27).makeWithdrawal(550).makeWithdrawal(200).display_user_balance()
 
 # Pam deposits/withdrawals
-pam.makeDeposit(3000)
-pam.makeWithdrawal(750)
-pam.makeWithdrawal(750)
-pam.makeWithdrawal(750)
-pam.display_user_balance()
+pam.makeDeposit(3000).makeWithdrawal(750).makeWithdrawal(750).makeWithdrawal(750).display_user_balance()
 
 # Transfer money from Michael to Pam
 michael.transfer_user_money(pam,50)
