@@ -1,0 +1,67 @@
+// Add 3 dojos
+INSERT INTO dojos (id, name, created_at, updated_at)
+VALUES (1, "The Dojo on Main Street", NOW(), NOW())
+
+INSERT INTO dojos (id, name, created_at, updated_at)
+VALUES (2, "The Jiu Jitsu Gym", NOW(), NOW())
+
+INSERT INTO dojos (id, name, created_at, updated_at)
+VALUES (3, "The Downtown Dojo", NOW(), NOW())
+
+// Delete the 3 dojos
+DELETE FROM dojos WHERE id = 1
+
+DELETE FROM dojos WHERE id = 2
+
+DELETE FROM dojos WHERE id = 3
+
+// Add 3 dojos again
+INSERT INTO dojos (id, name, created_at, updated_at)
+VALUES (1, "The Dojo on Main Street", NOW(), NOW())
+
+INSERT INTO dojos (id, name, created_at, updated_at)
+VALUES (2, "The Jiu Jitsu Gym", NOW(), NOW())
+
+INSERT INTO dojos (id, name, created_at, updated_at)
+VALUES (3, "The Downtown Dojo", NOW(), NOW())
+
+// Add 3 ninjas to each of the 3 dojos
+INSERT INTO ninjas (id, first_name, last_name, age, created_at, updated_at, dojo_id)
+VALUES (1, "Billie", "Mccray", 54, NOW(), NOW(), 1)
+
+INSERT INTO ninjas (id, first_name, last_name, age, created_at, updated_at, dojo_id)
+VALUES (2, "Ivy", "Richard", 36, NOW(), NOW(), 1)
+
+INSERT INTO ninjas (id, first_name, last_name, age, created_at, updated_at, dojo_id)
+VALUES (3, "Elysha", "Bate", 23, NOW(), NOW(), 1)
+
+INSERT INTO ninjas (id, first_name, last_name, age, created_at, updated_at, dojo_id)
+VALUES (4, "Faiz", "Gilmour", 24, NOW(), NOW(), 2)
+
+INSERT INTO ninjas (id, first_name, last_name, age, created_at, updated_at, dojo_id)
+VALUES (5, "Wilbur", "Simon", 22, NOW(), NOW(), 2)
+
+INSERT INTO ninjas (id, first_name, last_name, age, created_at, updated_at, dojo_id)
+VALUES (6, "Dulcie", "Shepherd", 23, NOW(), NOW(), 2)
+
+INSERT INTO ninjas (id, first_name, last_name, age, created_at, updated_at, dojo_id)
+VALUES (7, "Husnain", "Bob", 29, NOW(), NOW(), 3)
+
+INSERT INTO ninjas (id, first_name, last_name, age, created_at, updated_at, dojo_id)
+VALUES (8, "Isadora", "Wardle", 25, NOW(), NOW(), 3)
+
+INSERT INTO ninjas (id, first_name, last_name, age, created_at, updated_at, dojo_id)
+VALUES (9, "Macsen", "John", 94, NOW(), NOW(), 3)
+
+// Select the ninjas from each individual dojo
+SELECT ninjas.first_name, ninjas.last_name, age
+FROM ninjas
+WHERE ninjas.dojo_id = 1
+
+SELECT ninjas.first_name, ninjas.last_name, age
+FROM ninjas
+WHERE ninjas.dojo_id = 2
+
+SELECT ninjas.first_name, ninjas.last_name, age
+FROM ninjas
+WHERE ninjas.dojo_id = 3
