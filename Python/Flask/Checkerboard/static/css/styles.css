@@ -1,0 +1,17 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0px;
+}
+
+h1 {
+    font-size: 3rem;
+    color: black;
+    background-color: brown;
+    padding: 10px;
+}
