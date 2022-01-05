@@ -1,17 +1,51 @@
+:root {
+    --color-primary: #ff0000;
+    --color-secondary: #000000;
+}
+
 * {
     margin: 0;
     padding: 0;
-}
-
-.container {
-    display: flex;
-    justify-content: center;
-    margin: 20px 0px;
+    box-sizing: border-box;
 }
 
 h1 {
     font-size: 3rem;
-    color: black;
-    background-color: brown;
+    color: var(--color-secondary);
+    background-color: var(--color-primary);
     padding: 10px;
+    margin: 20px 0;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.row {
+    display: flex;
+}
+
+.square {
+    height: 100px;
+    width: 100px;
+}
+
+/* Style the alternating squares as different colors */
+.square:nth-child(even) {
+    background-color: var(--color-primary);
+}
+
+.square:nth-child(odd) {
+    background-color: var(--color-secondary);
+}
+
+.row:nth-child(even) .square:nth-child(even) {
+    background-color: var(--color-secondary);
+}
+
+.row:nth-child(even) .square:nth-child(odd) {
+    background-color: var(--color-primary);
 }

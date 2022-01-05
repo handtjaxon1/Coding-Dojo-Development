@@ -8,23 +8,27 @@
 
     <!-- Link the static style sheet to the web page -->
     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/styles.css') }}">
+
+    <style>
+        {% if color1 is defined %}
+        body {
+            --color-primary: {{color1}};
+            --color-secondary: {{color2}};
+        }
+        {% endif %}
+    </style>
 </head>
 <body>
     <div class="container">
         <h1>*** Checkerboard ***</h1>
-    </div>
-    <div class="container">
-        <div class="board">
-            <div class="square"></div>
-            <div class="square"></div>
-            <div class="square"></div>
-            <div class="square"></div>
-        </div>
-        <div class="board">
-            <div class="square"></div>
-            <div class="square"></div>
-            <div class="square"></div>
-            <div class="square"></div>
+        <div>
+            {% for row in range(0,rows): %}
+                <div class="row">
+                    {% for col in range(0,cols): %}
+                        <div class="square"></div>
+                    {% endfor %}
+                </div>
+            {% endfor %}
         </div>
     </div>
 </body>
