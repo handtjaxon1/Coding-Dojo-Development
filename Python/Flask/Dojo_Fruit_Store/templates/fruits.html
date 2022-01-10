@@ -1,0 +1,77 @@
+<html>
+<head>
+    <title>Dojo Fruit Store Assignment</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/bootstrap.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+
+    <header>
+        <div class="navbar navbar-dark bg-dark box-shadow">
+          <div class="container d-flex justify-content-between">
+            <a href="#" class="navbar-brand d-flex align-items-center">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mr-2"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"></path><circle cx="12" cy="13" r="4"></circle></svg>
+              <strong>Dojo Fruit Store</strong>
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarHeader" aria-controls="navbarHeader" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+          </div>
+        </div>
+      </header>
+  
+      <main role="main">
+  
+        <section class="jumbotron text-center">
+          <div class="container">
+            <h1 class="jumbotron-heading">Dojo Fruits</h1>
+            <p>Please figure out how to display the images here...</p>
+            <div class="row">
+              <div class="col-12 col-sm-6 col-md-4 col-xl-3 mb-3">
+                <div class="card">
+                  <img src="static/img/apple.png" alt="apple" class="card-img-top">
+                  <div class="card-body">
+                    <h4 class="card-title">Apple</h3>
+                    <p class="card-text">An edible fruit produced by an apple tree. Apples are crunchy and low in acid, creating a mild and balanced, sweet-tart flavor with notes of honey and citrus.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-12 col-sm-6 col-md-4 col-xl-3 mb-3">
+                <div class="card">
+                  <img src="static/img/blackberry.png" alt="apple" class="card-img-top">
+                  <div class="card-body">
+                    <h4 class="card-title">Blackberry</h3>
+                    <p class="card-text">Blackberries do not have a hollow center, instead they have a solid, edible core. When ripe, Blackberries have a deep inky sheen with purple highlights. They are succulent, soft, and juicy. Their flavor is sweet, slightly tart, with earthy undertones.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-12 col-sm-6 col-md-4 col-xl-3 mb-3">
+                <div class="card">
+                  <img src="static/img/raspberry.png" alt="apple" class="card-img-top">
+                  <div class="card-body">
+                    <h4 class="card-title">Raspberry</h3>
+                    <p class="card-text">There are many types of Raspberries appearing in hues of red, black, gold, and purple. When harvested, the fruits detach from the central core creating the signature hollow cavity. Raspberries have a bright and tangy, sweet-tart flavor, with earthy, jammy, and mouth-puckering nuances.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-12 col-sm-6 col-md-4 col-xl-3 mb-3">
+                <div class="card">
+                  <img src="static/img/strawberry.png" alt="apple" class="card-img-top">
+                  <div class="card-body">
+                    <h4 class="card-title">Strawberry</h3>
+                    <p class="card-text">Strawberries have an overall conical heart shape and can vary in size depending upon cultivar and growing conditions. While sugar contents can vary from sweet-tart to candy-like syrup, Strawberries maintain a balanced acidity level.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <p>
+              <a href="/" class="btn btn-primary my-2">Go back</a>
+            </p>
+          </div>
+        </section>
+  
+      </main>
+      
+</body>
+</html>
