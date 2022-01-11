@@ -2,3 +2,8 @@ hr {
     /* Horizontal rule with same color as the bootstrap light text */
     border-top: 2px solid #f8f9fa; 
 }
+
+.min-width {
+    width: 100%;
+    min-width: 480px;
+}
