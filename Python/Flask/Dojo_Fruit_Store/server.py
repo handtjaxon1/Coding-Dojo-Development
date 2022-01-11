@@ -31,6 +31,7 @@ def checkout():
         # Get the time the order was placed, as a friendly display string
         order_time = datetime.datetime.now().strftime("%B %#d, %Y %H:%M:%S")
 
+    # Could combine all the data entries into a single dictionary that we then pass through to the render template
     return render_template("checkout.html", first_name=first_name, last_name=last_name, student_id=student_id, items=items, order_total=order_total, order_time=order_time)
 
 @app.route('/fruits')         
