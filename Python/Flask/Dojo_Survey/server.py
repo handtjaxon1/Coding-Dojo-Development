@@ -11,9 +11,16 @@ def home():
 @app.route('/process', methods=['POST'])
 def process():
     print("Received Post Info")
-    return redirect('/result')
+    data = request.form
+    session['name'] = data['name']
+    session['location'] = data['location']
+    session['language'] = data['language']
+    session['comment'] = data['comment']
+    session['education'] = data['education']
+    session['interests'] = data['interests']
+    return redirect('/results')
 
-@app.route('/result')
+@app.route('/results')
 def display_result():
     return render_template("result.html")
 
