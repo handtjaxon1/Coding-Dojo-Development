@@ -22,7 +22,7 @@ def destroy_sessions():
 
 def add_visits(num: int = 1):
     # Only add visits if the visits key exists in the current session (It will after the first visit)
-    if session.get('visits'):
+    if session.get('visits'): # dict.get is useful for checking if a key even exists, and then doing something with it afterwards
         session['visits'] += num
     else:
         session['visits'] = 1
