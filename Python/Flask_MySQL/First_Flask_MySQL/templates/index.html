@@ -8,5 +8,12 @@
 </head>
 <body>
     <h1>First Flask / MySQL Connection</h1>
+    <h2>All My Friends</h2>
+    {% for friend in all_friends %}
+        <p>First Name: {{friend.first_name}}</p>
+        <p>Last Name: {{friend.last_name}}</p>
+        <p>Occupation: {{friend.occupation}}</p>
+        <hr>
+    {% endfor %}
 </body>
 </html>
