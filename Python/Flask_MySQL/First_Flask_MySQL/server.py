@@ -9,9 +9,7 @@ app.secret_key = secrets.token_hex()
 def index():
     friends = Friend.get_all()
     print(friends)
-    for friend in friends:
-        print(friend.first_name)
-    return render_template("index.html")
+    return render_template("index.html", all_friends = friends)
 
 if __name__ == "__main__":
     app.run(debug=True)
