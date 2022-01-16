@@ -11,6 +11,12 @@ class User:
         self.updated_at = data["updated_at"]
 
     @classmethod
+    def get(cls, data):
+        query = "SELECT * FROM users WHERE id = %(id)s;"
+        result = connectToMySQL("users_schema").query_database(query, data)
+        return cls(result[0])
+
+    @classmethod
     def get_all(cls):
         query = "SELECT * FROM users;"
         results = connectToMySQL("users_schema").query_database(query)
@@ -23,3 +29,13 @@ class User:
     def save(cls, data):
         query = "INSERT INTO users (first_name, last_name, email) VALUES (%(fname)s, %(lname)s, %(email)s);"
         return connectToMySQL("users_schema").query_database(query, data)
+
+    @classmethod
+    def update(cls, data):
+        query = "UPDATE users SET first_name = %(fname)s, last_name = %(lname)s, email = %(email)s, updated_at = NOW() WHERE id = %(id)s;"
+        return connectToMySQL("users_schema").query_database(query, data)
+
+    @classmethod
+    def delete(cls,data):
+        query  = "DELETE FROM users WHERE id = %(id)s;"
+        return connectToMySQL("users_schema").query_database(query,data)
