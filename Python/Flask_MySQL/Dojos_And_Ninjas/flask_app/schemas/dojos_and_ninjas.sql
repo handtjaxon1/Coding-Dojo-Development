@@ -34,9 +34,9 @@ CREATE TABLE IF NOT EXISTS `dojos_and_ninjas`.`ninjas` (
   `first_name` VARCHAR(255) NULL,
   `last_name` VARCHAR(255) NULL,
   `age` INT NULL,
+  `dojos_id` INT NOT NULL,
   `created_at` DATETIME NULL DEFAULT NOW(),
   `updated_at` DATETIME NULL DEFAULT NOW(),
-  `dojos_id` INT NOT NULL,
   PRIMARY KEY (`id`),
   INDEX `fk_ninjas_dojos_idx` (`dojos_id` ASC) VISIBLE,
   CONSTRAINT `fk_ninjas_dojos`
