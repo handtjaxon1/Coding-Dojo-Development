@@ -1,0 +1,20 @@
+1) I got this error by using the wrong password for the connection
+RuntimeError: 'cryptography' package is required for sha256_password or caching_sha2_password auth methods
+
+2) I got this error by changing the cursorclass from DictCursor to a plain old Cursor
+TypeError: tuple indices must be integers or slices, not str
+
+3) I got this error by changing the host from "localhost" to "127.0.0.1:5000".
+pymysql.err.OperationalError: (2003, "Can't connect to MySQL server on '127.0.0.1:5000' ([Errno 11001] getaddrinfo failed)")
+
+4) I got this error by using an incorrect user
+pymysql.err.OperationalError: (1045, "Access denied for user 'handt'@'localhost' (using password: YES)")
+
+5) I got this error by changing the charset to a version that wasn't accepted for connections
+AttributeError: 'NoneType' object has no attribute 'encoding'
+
+6) I got a 404 error with the below information by closing the connection request while the query_database function was executing
+pymysql.err.Error: Already closed
+
+
+
