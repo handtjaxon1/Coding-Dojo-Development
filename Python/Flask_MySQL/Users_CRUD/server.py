@@ -1,5 +1,6 @@
 from flask import Flask, render_template, request, redirect
 import secrets
+from models.user import User
 
 app = Flask(__name__)
 app.secret_key = secrets.token_hex()
@@ -23,6 +24,7 @@ def add_user():
         "lname": request.form["lname"],
         "email": request.form["email"]
     }
+    User.save(data)
     return redirect('/users/new')
 
 if __name__ == "__main__":
