@@ -1,0 +1,9 @@
+/* a {
+    /Replaced with .fs-5 bootstrap text utility classes
+    font-size: 1.25rem;
+} */
+
+/* Intended for use on the show.html page, but I decided I didn't like the look */
+.show-border {
+    border: 1px solid #0f0f0f;
+}
