@@ -11,7 +11,9 @@ def index():
 
 @app.route('/users')
 def display():
-    return render_template("read.html")
+    users = User.get_all()
+    print(users)
+    return render_template("read.html", users = users)
 
 @app.route('/users/new')
 def create():
@@ -25,7 +27,7 @@ def add_user():
         "email": request.form["email"]
     }
     User.save(data)
-    return redirect('/users/new')
+    return redirect('/users')
 
 if __name__ == "__main__":
     app.run(debug=True)

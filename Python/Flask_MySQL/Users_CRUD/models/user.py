@@ -12,7 +12,7 @@ class User:
 
     @classmethod
     def get_all(cls):
-        query = "SELECT id, first_name, last_name, email, created_at FROM users;"
+        query = "SELECT * FROM users;"
         results = connectToMySQL("users_schema").query_database(query)
         users = []
         for user in results:
@@ -22,4 +22,4 @@ class User:
     @classmethod
     def save(cls, data):
         query = "INSERT INTO users (first_name, last_name, email) VALUES (%(fname)s, %(lname)s, %(email)s);"
-        return connectToMySQL("users.schema").query_database(query, data)
+        return connectToMySQL("users_schema").query_database(query, data)
