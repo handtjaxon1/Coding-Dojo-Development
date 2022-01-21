@@ -1,0 +1,9 @@
+.link-dojo {
+    color: var(--bs-light);
+    text-decoration: none;
+}
+
+.link-dojo:hover, .link-dojo:focus {
+    color: var(--bs-warning);
+    text-decoration: underline;
+}
