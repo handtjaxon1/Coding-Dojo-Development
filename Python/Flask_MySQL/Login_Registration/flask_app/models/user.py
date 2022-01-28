@@ -1,4 +1,8 @@
 from flask_app.config.mysqlconnection import connectToMySQL
+import re
+
+# Email address validation regex
+EMAIL_REGEX = re.compile(r'^[a-zA-Z0-9.+_-]+@[a-zA-Z0-9._-]+\.[a-zA-Z]+$')
 
 # A class modeled after a User in the users table
 class User:
@@ -26,3 +30,50 @@ class User:
         for result in results:
             users.append(cls(result))
         return users
+
+    # Returns the user based on an email
+    @classmethod
+    def get_by_email(cls, data):
+        query = "SELECT * FROM users WHERE email = %(email)s;"
+        results = connectToMySQL("logins_registration").query_database(query, data)
+        # Don't return 
+        if len(results) < 1:
+            return False
+        return cls(results[0])
+
+    # Returns the user based on an id
+    @classmethod
+    def get_by_id(cls, data):
+        query = "SELECT * FROM users WHERE id = %(id)s;"
+        results = connectToMySQL("logins_registration").query_database(query, data)
+        return cls(results[0])
+
+    @staticmethod
+    def validate_registration(user):
+        is_valid = True
+        query = "SELECT * FROM users WHERE email = %(email)s;"
+        results = connectToMySQL("logins_registration").query_database(query, user)
+        # Check if there's at least 1 result because that means the email was taken already
+        if len(results) >= 1:
+            flash("Email already taken.","register")
+            is_valid = False
+        # Check if the email input is a validly formatted email
+        if not EMAIL_REGEX.match(user['email']):
+            flash("Invalid Email. Please enter a correctly formatted email address.","register")
+            is_valid = False
+        # Check if the first name has a minimum of 3 characters (frankly I think this should be at least 2 since someone could have the name 'Ty' but whatevs)
+        if len(user['first_name']) < 3:
+            flash("First Name must be at least 3 characters","register")
+            is_valid = False
+        # Check if the last name has a minimum of 3 characters (see the point above)
+        if len(user['last_name']) < 3:
+            flash("Last Name must be at least 3 characters","register")
+            is_valid = False
+        # Check if the password is at least 8 characters long. Helps ensure greater security
+        if len(user['password']) < 8:
+            flash("Password must be at least 8 characters","register")
+            is_valid = False
+        # Verify that the passwords match each other
+        if user['password'] != user['confirm']:
+            flash("Passwords don't match","register")
+        return is_valid
