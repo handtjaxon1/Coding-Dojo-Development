@@ -27,7 +27,7 @@ def register():
     # Redirect to the dashboard, effectually acting like logging in the user at the same time as registration
     return redirect("/dashboard")
 
-@app.route("login", methods=["POST"])
+@app.route("/login", methods=["POST"])
 def login():
     form = request.form
 
