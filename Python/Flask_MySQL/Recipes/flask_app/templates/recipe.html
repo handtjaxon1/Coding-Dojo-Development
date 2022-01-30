@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{recipe.name}}</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+</head>
+<body>
+    <div class="container d-flex justify-content-between">
+        <div>
+            <h1>Welcome {{user.first_name}}!</h1>
+        </div>
+        <div class="align-self-center">
+            <a class="btn btn-warning me-3" href="/dashboard">Dashboard</a>
+            <a class="btn btn-warning" href="/logout">Logout</a>
+        </div>
+    </div>
+    <div class="container bg-dark text-light p-4">
+        <h2 class="text-warning">{{recipe.name}}</h2>
+        <p>Description:  {{recipe.description}}</p>
+        <p>Under 30 Minutes:
+            {%  if recipe.under_30 == 1 %}
+            Yes
+            {% else %}
+            No
+            {% endif %}
+        </p>
+        <p>Instructions:  {{recipe.instructions}}</p>
+        <p>Made On:  {{recipe.date_made.strftime("%Y-%m-%d")}}</p>
+    </div>
+</body>
+</html>
