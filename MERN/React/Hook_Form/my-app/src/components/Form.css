@@ -1,0 +1,29 @@
+* {
+    box-sizing: border-box;
+}
+
+.formDiv {
+    width: 500px;
+    margin: 20px auto;
+}
+
+.inputDiv {
+    margin: 5px 0;
+    padding: 10px;
+    background-color: #f0f0f0;
+    border: 1px solid #c8c8c8;
+    border-radius: 5px;
+}
+
+label {
+    width: 35%;
+    display: inline-block;
+}
+
+input {
+    width: 60%;
+    display: inline-block;
+    padding: 5px;
+    border: 1px solid #c8c8c8;
+    border-radius: 5px;
+}
