@@ -8,6 +8,7 @@ A personal repository used for uploading practice code and assignments for easy 
 
 The folder structure of this repo is as follows. Note that both assignments and practice are stored in the same last leaf folder.
 
+```
 Coding Dojo Development/  
 |  
 |---> Track/  
@@ -34,4 +35,4 @@ Coding Dojo Development/
 |     |---> Course/  
 |  
 |---> Track/  
-
+```
