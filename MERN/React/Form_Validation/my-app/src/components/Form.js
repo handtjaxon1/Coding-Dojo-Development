@@ -23,9 +23,14 @@ function reducer(state, action) {
     };
 }
 
-function validateEmail(emailInput) {
+function validateEmail(e) {
+    const { name, value } = e.target;
+    dispatch({
+        type: name,
+        payload: value
+    });
     var emailFormat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
-    return emailInput.value.match(emailFormat);
+    return e.value.match(emailFormat);
 }
 
 function Form(props) {
