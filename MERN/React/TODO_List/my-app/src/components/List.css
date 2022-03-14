@@ -1,0 +1,12 @@
+.checked, .unchecked {
+    display: inline-flex;
+    align-items: center;
+}
+
+.checked {
+    text-decoration: line-through;
+}
+
+.unchecked {
+    text-decoration: none;
+}
