@@ -10,6 +10,8 @@ function Form(props) {
     function handleSubmit(e) {
         e.preventDefault();
         setColors([...colors, currentColor])
+        // Resets the color value
+        setCurrentColor("");
     }
 
     return (
@@ -19,6 +21,7 @@ function Form(props) {
                 type="text"
                 name="color"
                 onChange={ (e) => setCurrentColor(e.target.value) }
+                value={ currentColor }
             />
             <input type="submit" value="Add" />
         </form>
