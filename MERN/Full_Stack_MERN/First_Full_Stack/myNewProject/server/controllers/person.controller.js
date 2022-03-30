@@ -14,3 +14,16 @@ module.exports.createPerson = (request, response) => {
         .then(person => response.json(person))
         .catch(err => response.json(err));
 }
+
+// Returns all of the people in our database
+module.exports.getAllPeople = (request, response) => {
+    Person.find({})
+        .then(people => {
+            console.log(people); // Logging is option but immensely helpful for debugging
+            response.json(people);
+        })
+        .catch(err => {
+            console.log(err);
+            response.json(err);
+        })
+}

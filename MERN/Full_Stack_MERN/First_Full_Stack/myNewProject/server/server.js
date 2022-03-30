@@ -14,14 +14,11 @@ app.use(express.urlencoded({extended: true}));
 
 // Import the config file for starting up our database
 require("./config/mongoose.config");
+
 // Import the routes export
-
-// This is a shorthand version of the next two lines of code: require("./routes/person.routes")(app);
-const personRoutes = require("./routes/person.routes");
-personRoutes(app);
-
-// Import the config file for starting up our database
-const database = require("./config/mongoose.config");
+require("./routes/person.routes")(app); // This is a shorthand version of the next two lines of code: 
+// const personRoutes = require("./routes/person.routes");
+// personRoutes(app);
 
 // Start the server on the designated port
 app.listen(port, () =>
