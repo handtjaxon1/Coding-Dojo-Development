@@ -27,3 +27,25 @@ module.exports.getOneProduct = (request, response) => {
             response.json(err);
         })
 }
+
+module.exports.updateProduct = (request, response) => {
+    Product.findOneAndUpdate({_id: request.params.id}, request.body, {new: true})
+        .then((product) => {
+            response.json(product);
+        })
+        .catch((err) => {
+            console.log(err);
+            response.json(err);
+        })
+}
+
+module.exports.deleteProduct = (request, response) => {
+    Product.deleteOne({_id: request.params.id})
+        .then((product) => {
+            response.json(product);
+        })
+        .catch((err) => {
+            console.log(err);
+            response.json(err);
+        })
+}
