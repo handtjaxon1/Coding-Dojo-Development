@@ -19,7 +19,7 @@ module.exports.createPerson = (request, response) => {
 module.exports.getAllPeople = (request, response) => {
     Person.find({})
         .then(people => {
-            console.log(people); // Logging is option but immensely helpful for debugging
+            //console.log(people); // Logging is option but immensely helpful for debugging
             response.json(people);
         })
         .catch(err => {

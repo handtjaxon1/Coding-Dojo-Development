@@ -1,7 +1,7 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import axios from "axios";
 
-function PersonForm() {
+function PersonForm(props) {
     // Code used for the default Hello World testing
     // const [message, setMessage] = useState("Loading...");
 
@@ -11,7 +11,9 @@ function PersonForm() {
     //         .catch(err => console.log(err))
     // }, []);
 
-    // Kepp track of what is being type via the useState hook
+    // Store the passed through props from the lifted state in Main.js
+    const {people, setPeople} = props;
+    // Keep track of what is being type via the useState hook
     const [firstName, setFirstName] = useState("");
     const [lastName, setLastName] = useState("");
 
@@ -22,13 +24,15 @@ function PersonForm() {
         // Make a post request to creat a new person
         axios.post("http://localhost:8000/api/people", {
             firstName, // This is shorthand syntax for firstName: firstName
-            lastName
+            lastName // This is shorthand syntax for lastName: lastName
         })
-            .then(res => {
+            .then((res) => {
                 console.log(res);
                 console.log(res.data);
+                // We will update the lifted state of our people array to include the current value in state plus the single new object that is created and returned from our post request
+                setPeople([...people], res.data);
             })
-            .catch(err => console.log(err));
+            .catch((err) => console.log(err));
     }
 
     return (
