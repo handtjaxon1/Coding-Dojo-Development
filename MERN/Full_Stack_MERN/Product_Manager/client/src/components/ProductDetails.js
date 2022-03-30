@@ -16,7 +16,7 @@ function ProductDetails(props) {
             .catch((err) => {
                 console.log(err);
             })
-    })
+    }, [])
 
     function deleteProduct(id) {
         axios.delete("http://localhost:8000/api/" + id)

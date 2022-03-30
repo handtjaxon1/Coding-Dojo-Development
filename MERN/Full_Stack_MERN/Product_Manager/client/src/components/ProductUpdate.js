@@ -19,7 +19,7 @@ function ProductUpdate(props) {
             .catch((err) => {
                 console.log(err);
             })
-    })
+    }, [])
 
     function updateProduct(e) {
         e.preventDefault();
@@ -31,6 +31,9 @@ function ProductUpdate(props) {
             .then((res) => {
                 console.log(res);
                 navigate("/");
+                setTitle("");
+                setPrice("");
+                setDescription("");
             })
             .catch((err) => {
                 console.log(err);
@@ -47,8 +50,8 @@ function ProductUpdate(props) {
                         type="text"
                         id="title"
                         name="title"
-                        value={title}
-                        onChange={(e) => setTitle(e.target.value)}
+                        onChange={ (e) => setTitle(e.target.value) }
+                        value={ title }
                     />
                 </div>
                 <div>
@@ -57,8 +60,8 @@ function ProductUpdate(props) {
                         type="text"
                         id="price"
                         name="price"
-                        value={price}
-                        onChange={(e) => setPrice(e.target.value)}
+                        onChange={ (e) => setPrice(e.target.value) }
+                        value={ price }
                     />
                 </div>
                 <div>
@@ -67,8 +70,8 @@ function ProductUpdate(props) {
                         type="text"
                         id="description"
                         name="description"
-                        value={description}
-                        onChange={(e) => setDescription(e.target.value)}
+                        onChange={ (e) => setDescription(e.target.value) }
+                        value={ description }
                     />
                 </div>
                 <input type="submit" value="Update"/>

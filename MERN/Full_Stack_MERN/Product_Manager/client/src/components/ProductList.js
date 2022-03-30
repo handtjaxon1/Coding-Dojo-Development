@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import axios from "axios";
 
 function ProductList(props) {
-    const {products, setProducts, removeFromDOM} = props;
+    const {products, setProducts} = props;
 
     useEffect(() => {
         axios.get("http://localhost:8000/api/products")
@@ -13,7 +13,7 @@ function ProductList(props) {
             .catch((err) => {
                 console.log(err);
             })
-    });
+    }, []);
 
     function deleteProduct(id) {
         axios.delete("http://localhost:8000/api/" + id)
