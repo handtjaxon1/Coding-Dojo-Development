@@ -27,3 +27,29 @@ module.exports.getAllPeople = (request, response) => {
             response.json(err);
         })
 }
+
+// Returns one person based on an ID
+module.exports.getPerson = (request, response) => {
+    Person.findOne({_id: request.params.id})
+        .then((person) => {
+            //console.log(person);
+            response.json(person);
+        })
+        .catch((err) => {
+            console.log(err);
+            response.json(err);
+        })
+}
+
+// Updates the person document with the specific ID
+module.exports.updatePerson = (request, response) => {
+    Person.findOneAndUpdate({_id: request.params.id}, request.body, {new: true})
+        .then((updatedPerson) => {
+            //console.log(updatedPerson);
+            response.json(updatedPerson);
+        })
+        .catch((err) => {
+            console.log(err);
+            response.json(err);
+        })
+}

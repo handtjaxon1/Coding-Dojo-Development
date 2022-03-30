@@ -1,4 +1,5 @@
 import React, { useEffect } from "react";
+import { Link } from "react-router-dom";
 import axios from "axios";
 
 function PersonList(props) {
@@ -8,7 +9,7 @@ function PersonList(props) {
     useEffect(() => {
         axios.get("http://localhost:8000/api/people")
             .then((res) => {
-                console.log(res.data);
+                //console.log(res.data);
                 setPeople(res.data)
             })
             .catch((err) => {
@@ -20,9 +21,13 @@ function PersonList(props) {
         <div>
             {
                 people.map((person, index) => {
-                    return <p key={index}>
-                        {person.lastName}, {person.firstName}
-                    </p>
+                    return (
+                        <div key={index}>
+                            <p>{person.lastName}, {person.firstName}</p>
+                            <Link to={`/people/${person._id}`}>{person.firstName}'s Page!</Link><br/>
+                            <Link to={`/people/edit/${person._id}`}>Edit</Link>
+                        </div>
+                    )
                 })
             }
         </div>
