@@ -5,6 +5,7 @@ import axios from "axios";
 function AuthorAdd(props) {
     const [name, setName] = useState("");
     const navigate = useNavigate();
+    const [errors, setErrors] = useState([]);
 
     function handleOnSubmit(e) {
         e.preventDefault();
@@ -18,6 +19,7 @@ function AuthorAdd(props) {
             })
             .catch((err) => {
                 console.log(err);
+                setErrors(err.response.data.errors);
             })
     }
 
@@ -41,9 +43,14 @@ function AuthorAdd(props) {
                         value={name}
                         onChange={(e) => setName(e.target.value)}
                     />
+                    {/* Display error message if name input is invalid */}
+                    { errors.name ? 
+                        <p>{errors.name.message}</p>
+                        : null
+                    }
                 </div>
                 <button onClick={(e) => handleOnCancel(e)}>Cancel</button>
-                <button>Submit</button>
+                <button type="submit">Submit</button>
             </form>
         </div>
     );

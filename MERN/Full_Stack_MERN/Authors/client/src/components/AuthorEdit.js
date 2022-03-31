@@ -6,6 +6,7 @@ function AuthorEdit(props) {
     const { id } = useParams();
     const [name, setName] = useState("");
     const navigate = useNavigate();
+    const [errors, setErrors] = useState([]);
 
     useEffect(() => {
         axios.get("http://localhost:8000/api/" + id)
@@ -29,6 +30,7 @@ function AuthorEdit(props) {
             })
             .catch((err) => {
                 console.log(err);
+                setErrors(err.response.data.errors);
             })
     }
 
@@ -50,9 +52,14 @@ function AuthorEdit(props) {
                         value={name}
                         onChange={(e) => setName(e.target.value)}
                     />
+                    {/* Display error message if name input is invalid */}
+                    { errors.name ? 
+                        <p>{errors.name.message}</p>
+                        : null
+                    }
                 </div>
                 <button onClick={(e) => handleOnCancel(e)}>Cancel</button>
-                <button>Submit</button>
+                <button type="submit">Submit</button>
             </form>
         </div>
     );
