@@ -19,7 +19,7 @@ function ProductUpdate(props) {
             .catch((err) => {
                 console.log(err);
             })
-    }, [])
+    }, []);
 
     function updateProduct(e) {
         e.preventDefault();
@@ -38,7 +38,7 @@ function ProductUpdate(props) {
             .catch((err) => {
                 console.log(err);
             })
-    }
+    };
 
     return (
         <div>
