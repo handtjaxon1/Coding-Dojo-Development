@@ -7,12 +7,12 @@ class Ninja {
     };
 
     sayName() {
-        print(this.name);
+        console.log(this.name);
         return this;
     };
 
     showStats() {
-        print("Name: " + this.name + ", Strength: " + this.strength + ", Speed: " + this.speed + ", Health: " + this.health);
+        console.log("Name: " + this.name + ", Strength: " + this.strength + ", Speed: " + this.speed + ", Health: " + this.health);
         return this;
     }
 
@@ -21,5 +21,3 @@ class Ninja {
         return this;
     }
 };
-
-export default Ninja;

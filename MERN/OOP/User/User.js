@@ -30,7 +30,7 @@ class User {
     }
 
     displayBalance() {
-        print(this.userName + ", Balance: $" + this.accountBalance);
+        console.log(this.userName + ", Balance: $" + this.accountBalance);
     }
 }
 

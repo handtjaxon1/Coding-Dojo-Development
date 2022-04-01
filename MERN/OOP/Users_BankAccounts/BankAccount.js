@@ -13,14 +13,14 @@ class BankAccount {
         if (this.balance - amount >= 0) {
             this.balance -= amount;
         } else {
-            print("Insufficient funds: Charge a $5 fee");
+            console.log("Insufficient funds: Charge a $5 fee");
             this.balance -= 5;
         }
         return this;
     }
 
     displayAccountInfo() {
-        print("Balance: $" + this.balance);
+        console.log("Balance: $" + this.balance);
         return this;
     }
 
@@ -32,4 +32,4 @@ class BankAccount {
     }
 };
 
-export default BankAccount;
+export { BankAccount };
