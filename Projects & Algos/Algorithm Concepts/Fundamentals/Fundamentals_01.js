@@ -1,5 +1,5 @@
 // Setting and Swapping
-function SettingAndSwapping() {
+function settingAndSwapping() {
     // Setting variables
     console.log("Setting variables...");
     let myNumber = 42;
@@ -17,7 +17,7 @@ function SettingAndSwapping() {
 }
 
 // Print - 52 to 1066
-function PrintNumbers() {
+function printNumbers() {
     // Prints 52 -> 1066 inclusive
     for (let num = 52; num <= 1066; num++) {
         console.log(num);   
@@ -29,14 +29,14 @@ function beCheerful() {
     console.log("good morning!");
 }
 
-function DontWorryBeHappy() {
+function dontWorryBeHappy() {
     for (let num = 0; num < 98; num++) {
         beCheerful();
     }
 }
 
 // Multiples of Three - but Not All
-function SomeMultiplesOfThree() {
+function someMultiplesOfThree() {
     for (let num = -300; num <= 0; num += 3) {
         if (num === -3 || num === -6) {
             continue
@@ -63,7 +63,7 @@ function SomeMultiplesOfThree() {
 }
 
 // Printing Integers with While
-function PrintWhile() {
+function printWhile() {
     let num = 2000;
     while (num <= 5280) {
         console.log(num);
@@ -72,7 +72,7 @@ function PrintWhile() {
 }
 
 // You Say It's Your Birthday
-function Birthday(birthMonth, birthDay) {
+function birthday(birthMonth, birthDay) {
     // Make two random numbers, with max of 31 (that's the max days in a month)
     const rand1 = Math.ceil(Math.random() * 31);
     const rand2 = Math.ceil(Math.random() * 31);
@@ -94,7 +94,7 @@ function Birthday(birthMonth, birthDay) {
 }
 
 // Leap Year
-function LeapYear(year) {
+function leapYear(year) {
     if (year % 4 === 0) {
         if (year % 100 === 0) {
             if (year % 400 === 0) {
@@ -114,7 +114,7 @@ function LeapYear(year) {
 }
 
 // Print and Count
-function PrintAndCount() {
+function printAndCount() {
     let count = 0;
     for (let num = 512; num <= 4096 ; num++) {
         if (num % 5 === 0) {
@@ -126,7 +126,7 @@ function PrintAndCount() {
 }
 
 // Multiples of Six
-function MultiplesOfSix() {
+function multiplesOfSix() {
     let num = 0;
     while (num <= 60000) {
         if (num % 6 === 0) {
@@ -137,7 +137,7 @@ function MultiplesOfSix() {
 }
 
 // Counting, the Dojo Way
-function CodingDojo() {
+function codingDojo() {
     for (let num = 1; num <= 100; num++) {
         if (num % 10 === 0) {
             console.log("Dojo");
@@ -152,12 +152,12 @@ function CodingDojo() {
 }
 
 // What Do You Know?
-function WhatdyaKnow(incoming) {
+function whatdyaKnow(incoming) {
     console.log(incoming);
 }
 
 // Whoa, That Sucker’s Huge…
-function BigBoi() {
+function bigBoi() {
     // Original, suboptimal method
     // Loops through all numbers between -300,000 and 300,000 and adds the odd values
     // let sum = 0;
@@ -185,7 +185,7 @@ function BigBoi() {
 }
 
 // Countdown by Fours
-function CountdownByFours() {
+function countdownByFours() {
     num = 2016
     while (num > 0) {
         console.log(num);
@@ -194,7 +194,7 @@ function CountdownByFours() {
 }
 
 // Flexible Countdown
-function FlexibleCountdown(lowNum, highNum, mult) {
+function flexibleCountdown(lowNum, highNum, mult) {
     for (let num = highNum; num > lowNum; num -= mult) {
         console.log(num);
     }
@@ -204,7 +204,7 @@ function FlexibleCountdown(lowNum, highNum, mult) {
 // I'll be honest, the name of this section indicates it's a "countdown", but the example given is
 // showing an ascedning order (6,12,15). Because of this I've written the program as a "countup"
 // param1 = multiple, param2 = starting number, param3 = ending number, param4 = omitted number
-function FinalCountdown(param1, param2, param3, param4) {
+function finalCountdown(param1, param2, param3, param4) {
     let current = param2;
     while (current <= param3) {
         if (current % param1 === 0 && current !== param4) {
@@ -214,21 +214,21 @@ function FinalCountdown(param1, param2, param3, param4) {
     }
 }
 
-// Testing functions
-// SettingAndSwapping();
-// PrintNumbers();
-// DontWorryBeHappy();
-// SomeMultiplesOfThree();
-// PrintWhile();
-// Birthday(10,4);
-// LeapYear(2000);
-// PrintAndCount();
-// MultiplesOfSix();
-// CodingDojo();
-// WhatdyaKnow("Not a damn thing");
-// BigBoi();
-// CountdownByFours();
-// FlexibleCountdown(2,9,3);
-FinalCountdown(3,5,17,9)
+// Testing Function - Uncomment each to test
+// settingAndSwapping();
+// printNumbers();
+// dontWorryBeHappy();
+// someMultiplesOfThree();
+// printWhile();
+// birthday(10,4);
+// leapYear(2000);
+// printAndCount();
+// multiplesOfSix();
+// codingDojo();
+// whatdyaKnow("Not a damn thing");
+// bigBoi();
+// countdownByFours();
+// flexibleCountdown(2,9,3);
+// finalCountdown(3,5,17,9)
 
 // node Fundamentals_01.js
