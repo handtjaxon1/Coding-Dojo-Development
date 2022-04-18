@@ -50,6 +50,7 @@ class LinkedList {
     }
 
     //------------------------------------ Contains Assignment ------------------------------------//
+    // Return whether a given value exists in the list
     contains(val) {
         if (!this.head) {
             return this;
@@ -69,5 +70,18 @@ class LinkedList {
         return false;
     }
 
-    
+    //------------------------------------ Length Assignment ------------------------------------//
+    // Get the "length" of the list
+    // We COULD just add a 'size' variable that gets incremented/decremented every time a node is added or removed. Then it'd be a constant time retrieval
+    length() {
+        let length = 0;
+
+        // Traverse the list and increment the length for each node in the list
+        let runner = this.head;
+        while (runner !== null) {
+            length++;
+            runner = runner.next;
+        }
+        return length;
+    }
 }
