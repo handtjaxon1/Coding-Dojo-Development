@@ -15,7 +15,7 @@ function reverse(arr) {
 
 // Rotate
 function rotate(arr, shiftBy) {
-    // This one took me far too long to solve lol
+    // Haven't been able to solve yet so back to the drawing board for now.
     return arr;
 }
 
