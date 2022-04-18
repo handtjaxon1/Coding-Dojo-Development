@@ -26,14 +26,25 @@ class LinkedList {
         this.head = newNode;
         return this;
     }
+
+    // Remove node from the front
+    removeFront() {
+        // Check if the list is empty
+        if (!this.head) {
+            return this;
+        }
+
+        let temp = this.head;
+        this.head = this.head.next;
+        temp = null;
+        return this;
+    }
+
+    // Get the value of the front node
+    front() {
+        if (!this.head) {
+            return this;
+        }
+        return this.head.data;
+    }
 }
-
-// Add Front
-
-
-// Remove Front
-
-
-// Front
-
-
