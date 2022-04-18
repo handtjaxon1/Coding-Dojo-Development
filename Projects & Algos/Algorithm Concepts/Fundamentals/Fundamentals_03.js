@@ -89,7 +89,19 @@ function countPositives(arr) {
 
 
 // --------------------- Evens and Odds ---------------------//
-
+function evensAndOdds(arr) {
+    let evenCount = 0;
+    let oddCount = 0;
+    arr.forEach(element => {
+        if (element % 2 === 0) {
+            eventCount++;
+            oddCount = 0;
+            if (evenCount >= 3) {
+                
+            }
+        }
+    });
+}
 
 
 // --------------------- Increment the Seconds ---------------------//
