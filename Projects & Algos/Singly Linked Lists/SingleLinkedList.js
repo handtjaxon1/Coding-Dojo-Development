@@ -84,4 +84,21 @@ class LinkedList {
         }
         return length;
     }
+
+    //------------------------------------ Display Assignment ------------------------------------//
+    // Display all the values of the list
+    display() {
+        if (!this.head) {
+            console.log("Empty list");
+            return this;
+        }
+
+        let runner = this.head;
+        while (runner !== null) {
+            // NOTE Rather than printing each value individually, we could append the values to a string that we print out at the end.
+            console.log(runner.data);
+            runner = runner.next;
+        }
+        return this;
+    }
 }
